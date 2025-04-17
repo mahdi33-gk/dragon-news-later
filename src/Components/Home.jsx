@@ -25,7 +25,13 @@ const Home = () => {
         <nav>
             <Nav></Nav>
         </nav>
-        <main></main>
+        <main className="grid grid-cols-12 mt-10">
+            <aside className="left col-span-3">Left</aside>
+            <section className="col-span-6">
+                <h1>Main content</h1>
+            </section>
+            <aside className="col-span-3">Right</aside>
+        </main>
       </div>
     </div>
   );
