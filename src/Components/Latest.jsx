@@ -3,7 +3,7 @@ import Marquee from 'react-fast-marquee';
 
 const Latest = () => {
     return (
-        <div className='flex gap-2 px-3 py-1 mt-5'>
+        <div className='flex gap-2 px-4 py-2 mt-5 bg-base-300'>
             <button className='btn btn-sm bg-rose-600 text-white'>Latest</button>
     
             <Marquee>
