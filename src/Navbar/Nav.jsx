@@ -1,9 +1,24 @@
 import React from "react";
+import { NavLink } from "react-router-dom";
+import profileIcon from '../images/user.png'
 
 const Nav = () => {
   return (
-    <div>
-        <h1>this is nav</h1>
+    <div className="flex justify-between mt-5 items-center">
+        <div></div>
+        <div className="gap-4 flex items-center text-gray-500">
+            <NavLink to={'/'}>Home</NavLink>
+            <NavLink to={'/career'}>Career</NavLink>
+            <NavLink to={'/about'}>About</NavLink>
+        </div>
+        <div className="flex gap-2 ">
+            <div>
+                <img src={profileIcon} alt="" />
+            </div>
+            <div>
+                <button className="btn btn-neutral px-6">Log in</button>
+            </div>
+        </div>
     </div>
   );
 };
