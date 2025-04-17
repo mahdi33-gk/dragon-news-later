@@ -5,7 +5,7 @@ import Home from './Components/Home';
 
 const Root = () => {
     return (
-        <div>
+        <div className='font-poppins'>
             <Outlet></Outlet>
         </div>
     );
