@@ -4,6 +4,7 @@ import moment from "moment";
 import Latest from "./Latest";
 import Nav from "../Navbar/Nav";
 import LeftNav from "../Aside components/LeftNav";
+import RightNav from "../Aside components/RightNav";
 
 
 const Home = () => {
@@ -33,7 +34,9 @@ const Home = () => {
             <section className="col-span-6">
                 <h1>Main content</h1>
             </section>
-            <aside className="col-span-3">Right</aside>
+            <aside className="col-span-3">
+                <RightNav></RightNav>
+            </aside>
         </main>
       </div>
     </div>
