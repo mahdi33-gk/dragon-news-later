@@ -3,6 +3,7 @@ import logo from "../images/logo.png";
 import moment from "moment";
 import Latest from "./Latest";
 import Nav from "../Navbar/Nav";
+import LeftNav from "../Aside components/LeftNav";
 
 
 const Home = () => {
@@ -25,8 +26,10 @@ const Home = () => {
         <nav>
             <Nav></Nav>
         </nav>
-        <main className="grid grid-cols-12 mt-10">
-            <aside className="left col-span-3">Left</aside>
+        <main className="grid md:grid-cols-12 mt-10">
+            <aside className="left col-span-3">
+                <LeftNav></LeftNav>
+            </aside>
             <section className="col-span-6">
                 <h1>Main content</h1>
             </section>
