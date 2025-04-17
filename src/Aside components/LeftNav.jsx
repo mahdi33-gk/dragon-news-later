@@ -9,7 +9,13 @@ const LeftNav = () => {
     },[])
     return (
         <div>
-            <h1>Left Nav link</h1>
+            <h1 className='text-[20px] font-semibold'>All Caterogy ({categories.length})</h1>
+{/* category btn */}
+            <div>
+                {
+                    categories.map((category)=> (<button key={category.category_id}>{category.category_name}</button>))
+                }
+            </div>
         </div>
     );
 };
