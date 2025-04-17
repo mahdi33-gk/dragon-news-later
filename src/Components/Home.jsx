@@ -1,6 +1,7 @@
 import React from "react";
 import logo from "../images/logo.png";
 import moment from "moment";
+import Latest from "./Latest";
 
 
 const Home = () => {
@@ -16,6 +17,10 @@ const Home = () => {
             {moment().format("MMMM Do YYYY, h:mm a")}
           </p>
         </header>
+         {/* latest news section*/}
+         <section>
+            <Latest></Latest>
+          </section>
         <nav></nav>
         <main></main>
       </div>
