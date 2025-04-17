@@ -1,11 +1,11 @@
 import React from 'react';
 import Nav from './Navbar/Nav';
 import { Outlet } from 'react-router-dom';
+import Home from './Components/Home';
 
 const Root = () => {
     return (
         <div>
-            <Nav></Nav>
             <Outlet></Outlet>
         </div>
     );
