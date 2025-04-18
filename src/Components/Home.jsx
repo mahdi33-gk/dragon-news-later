@@ -29,7 +29,7 @@ const Home = () => {
         <nav>
             <Nav></Nav>
         </nav>
-        <main className="grid md:grid-cols-12 mt-10">
+        <main className="grid md:grid-cols-12 gap-4 mt-10">
             <aside className="left col-span-3">
                 <LeftNav></LeftNav>
             </aside>
