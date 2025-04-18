@@ -1,5 +1,5 @@
 import React from "react";
-import { NavLink } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 import profileIcon from '../images/user.png'
 
 const Nav = () => {
@@ -16,7 +16,7 @@ const Nav = () => {
                 <img src={profileIcon} alt="" />
             </div>
             <div>
-                <button className="btn btn-neutral px-6">Log in</button>
+                <Link to={'/auth'} className="btn btn-neutral px-6">Log in</Link>
             </div>
         </div>
     </div>
