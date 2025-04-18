@@ -11,6 +11,7 @@ import Root from './Root.jsx';
 import Error from './Error Page/Error.jsx';
 import Home from './Components/Home.jsx';
 import MainNews from './Components/MainNews.jsx';
+import About from './Components/About.jsx';
 
 const router = createBrowserRouter([
   {
@@ -30,6 +31,10 @@ const router = createBrowserRouter([
             path:'category/:id',
             element: <MainNews></MainNews>,
             loader: ({params}) => fetch(`https://openapi.programming-hero.com/api/news/category/${params.id}`)
+          },
+          {
+            path: '/about',
+            element:<About></About>
           }
         ]
       },
