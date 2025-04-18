@@ -16,7 +16,7 @@ const Nav = () => {
                 <img src={profileIcon} alt="" />
             </div>
             <div>
-                <Link to={'/auth'} className="btn btn-neutral px-6">Log in</Link>
+                <Link to={'/auth/login'} className="btn btn-neutral px-6">Log in</Link>
             </div>
         </div>
     </div>

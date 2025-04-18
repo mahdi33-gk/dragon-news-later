@@ -12,6 +12,9 @@ import Error from './Error Page/Error.jsx';
 import Home from './Components/Home.jsx';
 import MainNews from './Components/MainNews.jsx';
 import About from './Components/About.jsx';
+import Auth from './Authenticaion/Auth.jsx';
+import Login from './Authenticaion/Login.jsx';
+import Register from './Authenticaion/Register.jsx';
 
 const router = createBrowserRouter([
   {
@@ -36,22 +39,23 @@ const router = createBrowserRouter([
             path: '/about',
             element:<About></About>
           },
-          {
-            path: '/auth',
-            element: <h2>Here is authentication</h2>,
-            children:[
-              {
-                path: '/auth/login',
-                element: <h2>login</h2>
-              },
-              {
-                path: '/auth/register',
-                element: <h2>register</h2>
-              }
-            ]
-          }
+          
         ]
       },
+      {
+        path: '/auth',
+        element: <Auth></Auth>,
+        children:[
+          {
+            path: '/auth/login',
+            element: <Login></Login>
+          },
+          {
+            path: '/auth/register',
+            element: <Register></Register>
+          }
+        ]
+      }
       
     ]
   },
