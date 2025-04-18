@@ -3,12 +3,18 @@ import { Link } from "react-router-dom";
 import { AuthContext } from "../../Provider/AuthProvider";
 
 const Register = () => {
+    const {newUserRegister} = useContext(AuthContext);
+    
+    const submitHandler = e => {
+        e.preventDefault();
+    }
   return (
+   
     <div>
       <div className=" w-3/5 mx-auto bg-slate-100 mt-5">
         <div className="p-3">
           <h1 className="text-2xl font-semibold">Register your account</h1>
-          <form className="card-body max-w-md mx-auto" action="">
+          <form className="card-body max-w-md mx-auto" onSubmit={submitHandler}>
             <fieldset className="fieldset">
               <label className="label text-lg">Your Name</label>
               <input
