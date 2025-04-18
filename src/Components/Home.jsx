@@ -5,6 +5,7 @@ import Latest from "./Latest";
 import Nav from "../Navbar/Nav";
 import LeftNav from "../Aside components/LeftNav";
 import RightNav from "../Aside components/RightNav";
+import MainNews from "./MainNews";
 
 
 const Home = () => {
@@ -32,7 +33,7 @@ const Home = () => {
                 <LeftNav></LeftNav>
             </aside>
             <section className="col-span-6">
-                <h1>Main content</h1>
+                <MainNews></MainNews>
             </section>
             <aside className="col-span-3">
                 <RightNav></RightNav>

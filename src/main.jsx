@@ -9,6 +9,7 @@ import App from './App.jsx'
 import Root from './Root.jsx';
 import Error from './Error Page/Error.jsx';
 import Home from './Components/Home.jsx';
+import MainNews from './Components/MainNews.jsx';
 
 const router = createBrowserRouter([
   {
@@ -18,8 +19,15 @@ const router = createBrowserRouter([
     children:[
       {
         path: '/',
-        element: <Home></Home>
-      }
+        element: <Home></Home>,
+        children:[
+          {
+            path:'category/:id',
+            element: <MainNews></MainNews>
+          }
+        ]
+      },
+      
     ]
   },
 ]);
