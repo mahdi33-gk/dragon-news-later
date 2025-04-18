@@ -11,10 +11,11 @@ const Register = () => {
         const photoURL = e.target.photo.value;
         const email = e.target.email.value;
         const password = e.target.password.value;
+        console.log(user)
         
         // createUserInFirebase
         newUserRegister(email,password).then(result=>setUser(result.user))
-        .then(error=>{
+        .catch(error=>{
             setUser(null)
         })
     }
