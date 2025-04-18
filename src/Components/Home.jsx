@@ -6,6 +6,7 @@ import Nav from "../Navbar/Nav";
 import LeftNav from "../Aside components/LeftNav";
 import RightNav from "../Aside components/RightNav";
 import MainNews from "./MainNews";
+import { Outlet } from "react-router-dom";
 
 
 const Home = () => {
@@ -33,7 +34,7 @@ const Home = () => {
                 <LeftNav></LeftNav>
             </aside>
             <section className="col-span-6">
-                <MainNews></MainNews>
+                <Outlet></Outlet>
             </section>
             <aside className="col-span-3">
                 <RightNav></RightNav>
