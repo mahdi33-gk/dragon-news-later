@@ -3,7 +3,7 @@ import { Link, Navigate, useNavigate } from "react-router-dom";
 import { AuthContext } from "../../Provider/AuthProvider";
 
 const Register = () => {
-  const { newUserRegister, user, setUser, error, setError } =
+  const { newUserRegister, user, setUser, error, setError, updateUserinfo } =
     useContext(AuthContext);
   const navigate =useNavigate();
 
@@ -23,7 +23,12 @@ const Register = () => {
     newUserRegister(email, password)
       .then((result) =>{
         setUser(result.user)
-        navigate('/category/01')
+        updateUserinfo({displayName:name,photoURL: photoURL}).then(()=>{
+          navigate('/category/01')
+        })
+        .catch(err=>{
+          setError(err)
+        })
       })
       .catch((error) => {
         setUser(null);
