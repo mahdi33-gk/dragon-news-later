@@ -48,7 +48,7 @@ const Singlenews = ({ singleNews }) => {
                 {details.length > 300
                     ? <>
                         {details.slice(0, 300)}...{' '}
-                        <Link className="text-orange-600 font-semibold cursor-pointer">Read More</Link>
+                        <Link to={`/news/${singleNews._id}`} className="text-orange-600 font-semibold cursor-pointer">Read More</Link>
                       </>
                     : details
                 }
