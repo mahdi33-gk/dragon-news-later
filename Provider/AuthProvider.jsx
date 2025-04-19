@@ -6,12 +6,15 @@ import { createUserWithEmailAndPassword, onAuthStateChanged, signInWithEmailAndP
 export const AuthContext = createContext();
 const AuthProvider = ({children}) => {
     const [user,setUser] = useState(null);
+    const [error, setError] = useState(null);
     const [loading,setLoading] = useState(true);
     console.log(user)
     
     const names = {
         name: 'mehedi'
     }
+   
+
     // registernew user
     const newUserRegister = (email,password) =>{
         return createUserWithEmailAndPassword(auth,email,password);
@@ -41,7 +44,9 @@ const AuthProvider = ({children}) => {
         setUser,
         signoutUser,
         signIn,
-        loading
+        loading,
+        error,
+        setError
     }
     return (
         <AuthContext.Provider value={authInfo}>

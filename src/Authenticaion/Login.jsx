@@ -6,19 +6,24 @@ import { AuthContext } from "../../Provider/AuthProvider";
 
 const Login = () => {
   const navigate =useNavigate()
-  const {setUser,signIn} = useContext(AuthContext);
+  const {setUser,signIn,error,setError} = useContext(AuthContext);
   const loginHandler = (e) => {
+    setError(null)
     e.preventDefault();
     const email = e.target.email.value;
     const password = e.target.password.value;
 
+    if(password.length<6){
+      setError('password must be 6 character')
+      return
+    }
     signIn(email,password)
     .then(result=>{
       setUser(result.user)
       navigate('/')
     })
     .catch(err=>{
-      console.log(err)
+      setError(err)
     })
     
   }
@@ -43,6 +48,11 @@ const Login = () => {
                 className="input  w-full"
                 placeholder="Password"
               />
+              <div>
+                {
+                  error && <span className="text-red-500">{error}</span>
+                }
+              </div>
               <div>
                 <a className="link link-hover">Forgot password?</a>
               </div>
