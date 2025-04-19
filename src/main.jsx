@@ -16,6 +16,7 @@ import Auth from "./Authenticaion/Auth.jsx";
 import Login from "./Authenticaion/Login.jsx";
 import Register from "./Authenticaion/Register.jsx";
 import AuthProvider from "../Provider/AuthProvider.jsx";
+import NewsDetails from "./Components/NewsDetails.jsx";
 
 const router = createBrowserRouter([
   {
@@ -59,6 +60,10 @@ const router = createBrowserRouter([
           },
         ],
       },
+      {
+        path: '/news',
+        element: <NewsDetails></NewsDetails>
+      }
     ],
   },
 ]);
