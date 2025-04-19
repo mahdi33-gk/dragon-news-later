@@ -25,8 +25,8 @@ const Nav = () => {
         <div className="flex gap-2 ">
             <div>
                 {
-                  user? <div>
-                    <img src={user?.photoURL} alt="" />
+                  user? <div className="flex flex-col items-center">
+                    <img className="w-10 h-10 rounded-full object-cover" src={user?.photoURL} alt="" />
                     <p>{user?.displayName}</p>
                   </div>:<img src={profileIcon} alt="" />
                 }
