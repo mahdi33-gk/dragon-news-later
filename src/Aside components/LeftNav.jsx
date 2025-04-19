@@ -1,5 +1,6 @@
-import React, { useEffect, useState } from "react";
+import React, { useContext, useEffect, useState } from "react";
 import { NavLink } from "react-router-dom";
+import { AuthContext } from "../../Provider/AuthProvider";
 
 const LeftNav = () => {
   const [categories, setCategories] = useState([]);
@@ -16,7 +17,13 @@ const LeftNav = () => {
       {/* category btn */}
       <div className="flex flex-col gap-2 mt-3 text-gray-500">
         {categories.map((category) => (
-          <NavLink to={`/category/${category.category_id}`} className="btn btn-ghost" key={category.category_id}>{category.category_name}</NavLink>
+          <NavLink
+            to={`/category/${category.category_id}`}
+            className="btn btn-ghost"
+            key={category.category_id}
+          >
+            {category.category_name}
+          </NavLink>
         ))}
       </div>
     </div>

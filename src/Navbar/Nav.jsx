@@ -1,8 +1,19 @@
-import React from "react";
+import React, { useContext } from "react";
 import { Link, NavLink } from "react-router-dom";
 import profileIcon from '../images/user.png'
+import { AuthContext } from "../../Provider/AuthProvider";
 
 const Nav = () => {
+    const {user, signoutUser} = useContext(AuthContext);
+    const signOutHandler = () => {
+        signoutUser()
+        .then(()=>{
+          setUser(null)
+        })
+        .catch(err=>{
+          console.log(err)
+        })
+      }
   return (
     <div className="flex justify-between mt-5 items-center">
         <div></div>
@@ -16,7 +27,11 @@ const Nav = () => {
                 <img src={profileIcon} alt="" />
             </div>
             <div>
-                <Link to={'/auth/login'} className="btn btn-neutral px-6">Log in</Link>
+                
+                
+                {
+                    user? <button onClick={signoutUser} className="btn btn-neutral px-6">Log out</button>:<Link to={'/auth/login'} className="btn btn-neutral px-6">Log in</Link>
+                }
             </div>
         </div>
     </div>

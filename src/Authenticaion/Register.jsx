@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import { AuthContext } from "../../Provider/AuthProvider";
 
 const Register = () => {
-    const {newUserRegister,user,setUser} = useContext(AuthContext);
+    const {newUserRegister,user,setUser,} = useContext(AuthContext);
     
     const submitHandler = e => {
         e.preventDefault();
@@ -19,6 +19,7 @@ const Register = () => {
             setUser(null)
         })
     }
+    
   return (
    
     <div>
@@ -68,6 +69,7 @@ const Register = () => {
               <Link to={"/auth/login"} className="text-red-400">
                 Login
               </Link>
+              
             </h1>
           </form>
         </div>
