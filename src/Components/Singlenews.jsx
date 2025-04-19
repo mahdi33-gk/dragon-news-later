@@ -1,5 +1,6 @@
 import React from 'react';
 import { FaBookmark, FaShareAlt, FaEye, FaStar } from 'react-icons/fa';
+import { Link } from 'react-router-dom';
 
 const Singlenews = ({ singleNews }) => {
     const {
@@ -47,7 +48,7 @@ const Singlenews = ({ singleNews }) => {
                 {details.length > 300
                     ? <>
                         {details.slice(0, 300)}...{' '}
-                        <span className="text-orange-600 font-semibold cursor-pointer">Read More</span>
+                        <Link className="text-orange-600 font-semibold cursor-pointer">Read More</Link>
                       </>
                     : details
                 }
