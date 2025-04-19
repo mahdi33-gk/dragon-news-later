@@ -11,7 +11,7 @@ const Nav = () => {
           setUser(null)
         })
         .catch(err=>{
-          console.log(err)
+          setError(err)
         })
       }
   return (
