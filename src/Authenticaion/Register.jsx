@@ -1,31 +1,36 @@
 import React, { useContext } from "react";
-import { Link } from "react-router-dom";
+import { Link, Navigate, useNavigate } from "react-router-dom";
 import { AuthContext } from "../../Provider/AuthProvider";
 
 const Register = () => {
-    const {newUserRegister,user,setUser,error,setError} = useContext(AuthContext);
-    
-    const submitHandler = e => {
-        e.preventDefault();
-        const name = e.target.name.value;
-        const photoURL = e.target.photo.value;
-        const email = e.target.email.value;
-        const password = e.target.password.value;
-        console.log(user)
+  const { newUserRegister, user, setUser, error, setError } =
+    useContext(AuthContext);
+  const navigate =useNavigate();
 
-        if(password.length <6){
-          setError('password must be 6 character or longer.');
-        }
-        
-        // createUserInFirebase
-        newUserRegister(email,password).then(result=>setUser(result.user))
-        .catch(error=>{
-            setUser(null)
-        })
+  const submitHandler = (e) => {
+    e.preventDefault();
+    const name = e.target.name.value;
+    const photoURL = e.target.photo.value;
+    const email = e.target.email.value;
+    const password = e.target.password.value;
+    console.log(user);
+
+    if (password.length < 6) {
+      setError("password must be 6 character or longer.");
     }
-    
+
+    // createUserInFirebase
+    newUserRegister(email, password)
+      .then((result) =>{
+        setUser(result.user)
+        navigate('/category/01')
+      })
+      .catch((error) => {
+        setUser(null);
+      });
+  };
+
   return (
-   
     <div>
       <div className=" w-3/5 mx-auto bg-slate-100 mt-5">
         <div className="p-3">
@@ -65,9 +70,7 @@ const Register = () => {
                 Term & Conditions
               </label>
               <div>
-                {
-                  error && <span className="text-red-500">{error}</span>
-                }
+                {error && <span className="text-red-500">{error}</span>}
               </div>
               <button className="btn btn-neutral rounded-none mt-4">
                 Register
@@ -78,7 +81,6 @@ const Register = () => {
               <Link to={"/auth/login"} className="text-red-400">
                 Login
               </Link>
-              
             </h1>
           </form>
         </div>

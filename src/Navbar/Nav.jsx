@@ -24,7 +24,12 @@ const Nav = () => {
         </div>
         <div className="flex gap-2 ">
             <div>
-                <img src={profileIcon} alt="" />
+                {
+                  user? <div>
+                    <img src={user?.photoURL} alt="" />
+                    <p>{user?.displayName}</p>
+                  </div>:<img src={profileIcon} alt="" />
+                }
             </div>
             <div>
                 
