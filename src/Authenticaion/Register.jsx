@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import { AuthContext } from "../../Provider/AuthProvider";
 
 const Register = () => {
-    const {newUserRegister,user,setUser,} = useContext(AuthContext);
+    const {newUserRegister,user,setUser,error,setError} = useContext(AuthContext);
     
     const submitHandler = e => {
         e.preventDefault();
@@ -12,6 +12,10 @@ const Register = () => {
         const email = e.target.email.value;
         const password = e.target.password.value;
         console.log(user)
+
+        if(password.length <6){
+          setError('password must be 6 character or longer.');
+        }
         
         // createUserInFirebase
         newUserRegister(email,password).then(result=>setUser(result.user))
@@ -60,6 +64,11 @@ const Register = () => {
                 <input type="checkbox" defaultChecked className="checkbox" />
                 Term & Conditions
               </label>
+              <div>
+                {
+                  error && <span className="text-red-500">{error}</span>
+                }
+              </div>
               <button className="btn btn-neutral rounded-none mt-4">
                 Register
               </button>
