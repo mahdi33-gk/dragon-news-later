@@ -1,8 +1,10 @@
 # 📰 Dragon News
 
-Welcome to **Dragon News**, a Firebase-hosted React application that displays the latest news updates. Built with modern frontend tools and libraries, this app offers a smooth user experience, secure authentication, and a clean design using Tailwind CSS and DaisyUI.
+Welcome to **Dragon News**, a Firebase-hosted React application that displays the latest news updates. Built with modern frontend tools and libraries, this app offers a smooth user experience, secure authentication, and a clean design using React,Tailwind CSS and DaisyUI.
 
 🔗 **Live Site:** [https://dragon-news-c4d23.firebaseapp.com](https://dragon-news-c4d23.firebaseapp.com)
+
+# Responsive version commig soon
 
 ---
 
