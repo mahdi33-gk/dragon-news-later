@@ -15,6 +15,7 @@ Welcome to **Dragon News**, a Firebase-hosted React application that displays th
 - 👤 **Firebase Auth Integration** – Secure login/registration via Firebase.
 - 🧭 **React Router & Private Routes** – Smooth, protected navigation.
 - 🎨 **Tailwind CSS & DaisyUI** – Stylish and clean responsive design (currently desktop-first).
+- 📡 **Dynamic Data Fetching** – News content is fetched from an external API for real-time updates.
 - 📷 **Dynamic Profile Display** – Shows user name and photo after login.
 - 📦 **Component-Based Architecture** – Easy to maintain and extend.
 
