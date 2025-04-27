@@ -46,6 +46,6 @@ To run this project locally:
 1. **Clone the repository:**
 
    ```bash
-   git clone https://github.com/mahdi33-gk/dragon-news-later.git
+   git clone https://github.com/mehediScriptDev/dragon-news-later.git
    cd dragon-news-later
 
